@@ -1,26 +1,28 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "Geany",
   "description": "A fast editor with project and build support.",
   "version": "2.1",
-  "image": "ghcr.io/containerpak/geany:main",
-  "binaries": ["/usr/bin/geany"],
-  "desktop_entries": ["/usr/share/applications/geany.desktop"],
+  "image": "ghcr.io/containerpak/geany@sha256:7b9a35c8333e8db254b26cc551d8644d1afd19553132346c385c0e28da549e51",
+  "binaries": [
+    "/usr/bin/geany"
+  ],
+  "desktop_entries": [
+    "/usr/share/applications/geany.desktop"
+  ],
   "dependencies": [],
-  "addons": ["github.com/containerpak/sdk-go", "github.com/containerpak/sdk-node-lts"],
+  "addons": [
+    "github.com/containerpak/sdk-go",
+    "github.com/containerpak/sdk-node-lts"
+  ],
   "idle_time": 0,
   "override": {
-    "socketX11": true,
     "socketWayland": true,
     "socketPulseAudio": false,
-    "socketSessionBus": true,
-    "socketSystemBus": false,
     "socketSshAgent": true,
     "socketCups": false,
     "socketGpgAgent": true,
-    "socketAtSpiBus": true,
-    "socketBluetooth": false,
     "deviceDri": true,
     "deviceKvm": false,
     "deviceShm": false,
@@ -32,7 +34,12 @@
     "deviceAll": false,
     "notification": false,
     "openURI": true,
-    "filesystem": [{"path": "home", "access": "read-write"}],
+    "filesystem": [
+      {
+        "path": "home",
+        "access": "read-write"
+      }
+    ],
     "env": [],
     "network": true,
     "process": false,
@@ -40,7 +47,6 @@
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": ["xdg-open"]
+    "asRoot": false
   }
 }
