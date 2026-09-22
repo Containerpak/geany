@@ -4,7 +4,7 @@
   "name": "Geany",
   "description": "A fast editor with project and build support.",
   "version": "2.1",
-  "image": "ghcr.io/containerpak/geany@sha256:ea8e25e4f90fe43c79da47acb5aea53aa03fdfc590dc1e9a566c19b598a7afbe",
+  "image": "ghcr.io/containerpak/geany@sha256:eb58fe7ec43104d9302d5eb068f7bfc7e760a1a939d3e91f52f8ab1d7a0ef3a3",
   "binaries": [
     "/usr/bin/geany"
   ],
